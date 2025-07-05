@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        *{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        body{
+            background-color: aquamarine;
+            text-align: center;
+            padding-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .counter{
+            background-color: #fff;
+            width: 550px;
+            height: 200px;
+            border-radius: 20px;
+            padding: 50px;
+        }
+        button{
+            border: none;
+            background-color:darkgray;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        button:hover{
+            background-color: #fff;
+            border: darkgray 2px solid;
+            cursor: pointer;
+        }
+        #increase, #decrease{
+            width: 50px;
+            margin: 10px;
+        }
+        #reset{
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter">
+        <h1>💻 This is a simple counter app</h1>
+        <button id="decrease" onclick="counterClick()">-</button>
+        <span id="countDisplay">0</span>
+        <button id="increase" onclick="counterClick()">+</button> <br>
+        <button id="reset">Reset</button>
+    </div>
+
+
+    <script>
+        function counterClick(){
+            let count = 0;
+            
+            return{
+                increament: function (){
+                    count++;
+                    return count;
+                },
+                decreament: function (){
+                    count--;
+                    return count;
+                },
+                reset: function (){
+                    count = 0;
+                    return count;
+                }
+            }
+        };
+
+        const counter = counterClick();
+        const counterDisplay = document.getElementById("countDisplay");
+
+        document.getElementById("increase").addEventListener("click", () => {
+            counterDisplay.textContent = `${counter.increament()}`
+        });
+
+        document.getElementById("decrease").addEventListener("click", () => {
+            counterDisplay.textContent = `${counter.decreament()}`
+        });
+
+        document.getElementById("reset").addEventListener("click", () => {
+            counterDisplay.textContent = `${counter.reset()}`
+        });
+    </script>
+</body>
+</html>
