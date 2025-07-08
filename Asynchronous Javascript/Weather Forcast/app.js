@@ -35,7 +35,7 @@ const getWeather = async () => {
             headers: {
                 Accept: 'application/json'
             }
-    });
+        });
         const weatherData = await weatherDataFetch.json();
         console.log(weatherData);
 

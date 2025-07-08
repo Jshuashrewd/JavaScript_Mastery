@@ -1,0 +1,116 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#app {
+    position: relative;
+    width: 414px;
+    height: 420px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 40px 0px;
+    overflow: hidden;
+    border-radius: 45px;
+    background-image: linear-gradient(
+        325deg,
+        hsl(240deg 97% 55%) 0%,
+        hsl(240deg 97% 65%) 32%,
+        hsl(240deg 97% 70%) 59%,
+        hsl(240deg 96% 75%) 74%,
+        hsl(240deg 96% 79%) 84%,
+        hsl(240deg 96% 82%) 90%,
+        hsl(240deg 96% 85%) 94%,
+        hsl(240deg 96% 88%) 97%,
+        hsl(240deg 96% 91%) 99%,
+        hsl(240deg 96% 93%) 100%,
+        hsl(240deg 96% 96%) 100%,
+        hsl(240deg 95% 98%) 100%,
+        hsl(0deg 0% 100%) 100%
+    );
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 10px;
+    color: #002;
+    font-size: 1.2rem;
+    padding: 5px 10px 5px 10px;
+}
+
+button:hover {
+    background-color: #002;
+    color: white;
+}
+button:active {
+    background-color: #004;
+    color: white;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#userDetails {
+    margin-bottom: 20px;
+}
+
+#userDetails h3 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+#userDetails h4 {
+    font-size: 1rem;
+    color:bisque;
+}
+
+/* Dotted Loader Spinner */
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  gap: 6px;
+}
+.loader-dot {
+  width: 10px;
+  height: 10px;
+  background: #fea;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: loader-bounce 0.8s infinite alternate;
+}
+.loader-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loader-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+@keyframes loader-bounce {
+  to {
+    opacity: 1;
+    transform: translateY(-8px);
+  }
+}
+
+#actionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
