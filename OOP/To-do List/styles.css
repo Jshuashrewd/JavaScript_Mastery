@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: beige;
+}
+
+.todoApp{
+    width: 400px;
+    margin: 50px auto;
+    padding: 50px 20px 20px 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.TodoTitle{
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.inputField{
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.addBtn{
+    margin-top: 10px;
+    width:13%;
+    color: #fff;
+    background-color: green;
+    border: 2px solid #fff;
+    font-size: 2rem;
+    font-weight: 900;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.list{
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    color: white;
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.todoList{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.todoList li{
+    background: #f9f9f9;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s;
+}
+
+.todo-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: green;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.todo-label {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+}
+
+.remove-btn {
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 1rem;
+    cursor: pointer;
+    border: #333 solid 1px;
+}
